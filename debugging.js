@@ -56,5 +56,51 @@ function electricBill(unit) {
     }
     return bill;
 }
-let usedUnit =190;
+let usedUnit = 300;
 console.log("Total Electric Bill:", electricBill(usedUnit));
+// If any of your friend get A+
+
+function checkGpa(marks) {
+    for (let i = 0; i < marks.length; i++) {
+        let element = marks[i];
+        if (element >= 80) {
+            return true;
+        }
+    }
+    return false;
+}
+// checkGpa([78, 82, 69]);
+console.log(checkGpa([78, 82, 69]));
+
+// Find the Largest element of an Array
+// let array = [3,5,7,1,9];
+function largestElement(array) {
+    let largest = array[0];
+    for (const element of array) {
+        if (element > largest) {
+            largest = element;
+        }
+    }
+    return largest;
+}
+let array = [2, 4, 8, 9, 1, 12];
+console.log("Largest element is:", largestElement(array));
+// Find the 2nd Largest element of an Array
+// let array = [3,5,7,1,9];
+function secondLargeststElement(array2) {
+    let largest = array2[0];
+    let secondLargest = array2[0];
+    for (let i = 0; i < array2.length; i++) {
+        let element = array2[i];
+        if (element > largest) {
+            secondLargest = largest;
+            largest = element;
+        }
+        else if (element > secondLargest) {
+            secondLargest = element;
+        }
+    }
+    return secondLargest;
+}
+let array2 = [45, 41, 56, 35, 64, 60];
+console.log("Second Largest is:", secondLargeststElement(array2));
